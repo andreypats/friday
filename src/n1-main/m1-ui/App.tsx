@@ -1,13 +1,17 @@
 import React from 'react';
-import './App.css';
+import {Header} from './header/Header';
+import {Navbar} from './navbar/Navbar';
+import {PagesRoutes} from './routes/PagesRoutes';
+
 
 function App() {
-  return (
-    <div className="App">
-        hello
-      {/*<Main />*/}
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header/>
+            <Navbar/>
+            <PagesRoutes/>
+        </div>
+    );
 }
 
 export default App;
