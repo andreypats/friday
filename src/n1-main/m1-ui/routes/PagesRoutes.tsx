@@ -13,13 +13,17 @@ export const PagesRoutes = () => {
     return (
         <div className={s.pagesRoutes}>
             <Routes>
+                {/*Стартовая страница*/}
+                <Route path={"/"} element={<TestPage/>}/>
+                {/*Переход по ссылкам*/}
                 <Route path={"/login/*"} element={<Login/>}/>
                 <Route path={"/registration/*"} element={<Registration/>}/>
                 <Route path={"/profile/*"} element={<Profile/>}/>
-                <Route path={"/error/*"} element={<ErrorPage/>}/>
                 <Route path={"/newPassword/*"} element={<NewPassword/>}/>
                 <Route path={"/recoveryPassword/*"} element={<RecoveryPassword/>}/>
                 <Route path={"/test/*"} element={<TestPage/>}/>
+                {/*Если страница не существует*/}
+                <Route path={"/*"} element={<ErrorPage/>}/>
             </Routes>
         </div>
     )
